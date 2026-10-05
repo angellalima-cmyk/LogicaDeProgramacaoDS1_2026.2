@@ -15,3 +15,20 @@ Calcule e mostre o total a pagar.
 """
 
 # TODO: Desenvolva o algoritmo abaixo:
+
+cardapio = {
+    1: 4.00,
+    2: 4.50,
+    3: 5.00,
+    4: 2.00,
+    5: 1.50,
+}
+
+codigo = int(input("digite o codigo do item (1 a 5): "))
+quantidade = int(input("digite a quantidade consumida: "))
+
+if codigo in cardapio:
+    total = cardapio[codigo] * quantidade
+    print(f"Total para pagar: R$ {total:.2f}")
+else:
+    print("Código de item inválido.")
