@@ -9,15 +9,12 @@ cujo resto da divisão por 5 seja igual a 2 ou igual a 3.
 """
 
 # TODO: Desenvolva o algoritmo abaixo:
-X = int(input("digite o valor de (X): "))
-Y = int(input("digite o valor de (Y): "))
+x = int(input("digite o valor de x: "))
+y = int(input("digite o valor de y: "))
 
+inicio = min(x, y)
+fim = max(x, y)
 
-print("Numeros entre", X, "e", Y, "com resto 2 ou 3 na divisão por 5:")
-
-for numero in range(X, Y + 1):
-    resto = numero % 5
-    if resto == 2 or resto == 3:
-        print(numero, end=" ")
-
-print()
+for i in range (inicio + 1, fim):
+    if i % 5 == 2 or i % 5 == 3:
+        print(i)
